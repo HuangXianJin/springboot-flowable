@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huangxj.flowable.mapper.ModelInfoMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, tenant_code, definition_id, model_key, name, description, form_type, form_id, form_path, xml, create_id, create_time, modify_id ,modify_time,deploy_time
+    </sql>
+    <!-- 自定义关联查询分页 -->
+    <select id="select" resultType="com.huangxj.flowable.dto.ModelInfoDto">
+        SELECT <include refid="Base_Column_List" />
+        FROM flow_model_info
+        <where>
+            <if test="queryParam.filter != null and queryParam.filter != ''">
+                and concat(
+                 IFNULL(definition_id, ''),
+                 IFNULL(model_key, ''),
+                 IFNULL(name, ''),
+                 IFNULL(description, ''),
+                ''
+                ) like concat('%',#{queryParam.filter},'%')
+            </if>
+        </where>
+    </select>
+</mapper>

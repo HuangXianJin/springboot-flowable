@@ -1,0 +1,37 @@
+{
+  "id": "1962802",
+  "name": "ui-admin",
+  "font_family": "iconfont",
+  "css_prefix_text": "my-icon-",
+  "description": "智慧校园重构",
+  "glyphs": [
+    {
+      "icon_id": "3888585",
+      "name": "summary",
+      "font_class": "summary",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "11674283",
+      "name": "调整",
+      "font_class": "tiaozheng",
+      "unicode": "e716",
+      "unicode_decimal": 59158
+    },
+    {
+      "icon_id": "141925",
+      "name": "publish",
+      "font_class": "publish",
+      "unicode": "e841",
+      "unicode_decimal": 59457
+    },
+    {
+      "icon_id": "11348890",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

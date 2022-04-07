@@ -1,0 +1,86 @@
+/**
+*文件用途说明：监控系统首页-公共样式
+*作者：鳄鱼仔
+*制作日期：2021.1.7
+**/
+
+/*方便测试
+.my-screen-index-box {background:red;}
+.my-screen-index-box .my-content {background:green;}
+.my-screen-index-box .my-content .my-content-message .my-message-box .my-topic-name {background:blue;}
+.my-screen-index-box .my-content .my-content-message .my-message-box .my-topic-main {background:pink}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-echart-box {background:green;}
+*/
+
+/*总体布局*/
+.my-screen-index-box {background:#f9fbfd;min-width:1000px;overflow:hidden;position:relative;width:100%;height:100%;color:#333;}
+.my-screen-index-box .my-table-box {display:table;width:100%;height:100%;}
+.my-screen-index-box .my-table-cell-box {display:table-cell;vertical-align:middle;text-align:center;}
+.my-screen-index-box .my-content {display:table;width:calc(100% - 30px);height:calc(100vh - 80px);margin:15px;}
+.my-screen-index-box .my-content .my-content-message {display:table-cell;vertical-align:middle;text-align:center;width:100%;height:100%;}
+.my-screen-index-box .my-content .my-content-message .my-message-box {background:#fff;border:1px solid #edf2f9;border-radius:.25rem;margin-bottom:15px;background-image:linear-gradient(90deg,rgba(50,0,0,0.03) 10%,rgba(0,0,0,0) 10%),linear-gradient(360deg,rgba(50,0,0,0.03) 10%,rgba(0,0,0,0) 10%);background-size:15px 15px;background-repeat:repeat;background-position:center center;}
+.my-screen-index-box .my-content .my-content-message .my-message-box .my-topic-name {width:100%;height:50px;line-height:50px;color:red;padding:0 15px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box .my-topic-name .my-mess-left {font-size:16px;color:#12244c;}
+.my-screen-index-box .my-content .my-content-message .my-message-box .my-topic-name .my-mess-right {text-align:right;}
+.my-screen-index-box .my-content .my-content-message .my-message-box .my-topic-unit {font-size:12px;color:#333;text-align:right;height:30px;line-height:30px;padding:0 15px;}
+
+/*第一部分*/
+.my-screen-index-box .my-content .my-content-message .my-message-box-first {height:280px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-topic-main {height:220px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-big-box {padding:0 15px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-big-box .my-big-box-right {text-align:right;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-echart-box {width:180px;height:180px;line-height:180px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-item-box {display:inline-block;padding:0 10px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-item-box .my-item-title {font-size:64px;font-weight:bold;color:#288dff;text-align:left;font-style:italic;white-space:nowrap;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .my-item-box .my-item-name {font-size:14px;color:#333;text-align:left;font-style:italic}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .el-col:nth-child(2) .my-item-box .my-item-title {color:#e85750}
+.my-screen-index-box .my-content .my-content-message .my-message-box-first .el-col:nth-child(3) .my-item-box .my-item-title {color:#e8980c;}
+
+/*第二部分*/
+.my-screen-index-box .my-content .my-content-message .my-message-box-second {height:210px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-second .my-topic-main {height:150px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-second .my-item-box {display:inline-block;margin:0 25px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-second .my-item-box .my-item-title {color:#288dff;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-second .my-item-box .my-item-title .my-item-title-name {font-size:64px;font-weight:bold;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-second .my-item-box .my-item-title .my-item-title-unit {font-size:29px;margin-left:5px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-second .my-item-box .my-item-name {font-size:14px;color:#333;text-align:left;margin:0 0 0 10px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-second .my-item-box:nth-child(2) .my-item-title {color:#e85750}
+
+/*第三部分*/
+.my-screen-index-box .my-content .my-content-message .my-message-box-third {height:335px;margin-bottom:0;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-third .my-topic-main {width:95%;height:260px;margin:10px auto;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-third .my-topic-main .my-echart-item {height:100%;}
+
+/*第四部分*/
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth {height:395px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-topic-main {height:340px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-table {width:100%;border-collapse:collapse;margin:15px;table-layout:fixed;word-break:break-all;margin-block-start:0;margin-block-end:0;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-table tr th,.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-table tr td {text-align:left;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px;color:#333;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-table tr th {font-size:16px;color:#12244c;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-table tr td:nth-child(4) {color:#e85750;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-nothing {color:#999;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-nothing .my-nothing-icon {font-size:50px;margin-bottom:15px;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-forth .my-desc-nothing .my-nothing-name {font-size:20px;}
+
+/*第五部分*/
+.my-screen-index-box .my-content .my-content-message .my-message-box-fifth {height:445px;margin-bottom:0;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-fifth .my-topic-main {width:95%;height:350px;margin:0 auto 10px auto;}
+.my-screen-index-box .my-content .my-content-message .my-message-box-fifth .my-topic-main .my-echart-item {height:100%;}
+
+/*首页*/
+/*总体布局*/
+.my-screen-index-box {background:#edf1f5;}
+.my-screen-index-box .my-content .my-content-message .my-message-box {background:#fff;background-image: none;border:1px solid #12244c;border-radius: 0;}
+.my-screen-index-box .my-content .my-content-message .my-message-box .my-topic-name .my-mess-right .el-button { border: 1px solid #6d768b;}
+.my-screen-index-box .my-tag-hat {background:orange;width:22px;height:16px;position:absolute;background-size:100% 100%;background:url("/static/images/my-screen-hat.png") no-repeat;background-size:100% 100%;}
+.my-screen-index-box .my-tag-hat1 {top:-1px;left:9px;transform:rotateY( 900deg );}
+.my-screen-index-box .my-tag-hat2 {top:-1px;right:9px;transform:rotate( 720deg );}
+.my-screen-index-box .my-tag-hat3 {bottom:14px;left:9px;transform:rotate( 180deg );}
+.my-screen-index-box .my-tag-hat4 {bottom:14px;right:9px;transform:rotateX( -2700deg);}
+.my-screen-index-box .my-message-box-third .my-tag-hat3 {bottom:-1px;}
+.my-screen-index-box .my-message-box-third .my-tag-hat4 {bottom:-1px;}
+.my-screen-index-box .my-message-box-fifth{position:relative}
+.my-screen-index-box .my-message-box-fifth .my-tag-hat1 {left:-2px;top:-2px;}
+.my-screen-index-box .my-message-box-fifth .my-tag-hat2 {right:-2px;top:-2px;}
+.my-screen-index-box .my-message-box-fifth .my-tag-hat3 {bottom:-2px;left:-2px;}
+.my-screen-index-box .my-message-box-fifth .my-tag-hat4 {bottom:-2px;right:-2px;}

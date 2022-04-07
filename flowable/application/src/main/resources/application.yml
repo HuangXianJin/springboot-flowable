@@ -1,0 +1,36 @@
+spring:
+  application.name: @application.name@
+  profiles:
+    active: @profile.name@
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  main:
+    allow-bean-definition-overriding: true
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:attachment,file:static
+# 开启压缩
+spring.resources.cache.period: 2592000
+# 启用缓存
+spring.resources.chain.enabled: true
+# # 开启gzip压缩
+spring.resources.chain.compressed: true
+
+
+# mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath*:com/huangxj/**/xml/*.xml
+  typeAliasesPackage: com.huangxj.**.entity
+
+# 配置日志地址
+logging:
+  config: classpath:logback/logback-@profile.name@.xml
+  file:
+    name: log/info.log
+
+# spring-admin监控
+management.endpoints.web.exposure.include: "*"
+management.endpoint.health.show-details: ALWAYS
+
+

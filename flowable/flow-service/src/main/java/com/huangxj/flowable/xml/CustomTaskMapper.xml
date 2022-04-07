@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huangxj.flowable.mapper.CustomTaskMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, assignee_user, assignee_user_name,name, task_id, result, comment, end_time, process_instance_id, process_definition_id, tenant_code, create_id, create_time, modify_id, modify_time,task_create_time
+    </sql>
+    <!-- 自定义关联查询分页 -->
+    <select id="select" resultType="com.huangxj.flowable.dto.CustomTaskDto">
+        SELECT <include refid="Base_Column_List" />
+        FROM flow_custom_task
+        <where>
+            <if test="queryParam.filter != null and queryParam.filter != ''">
+                and concat(
+                IFNULL(assignee_user, ''),
+                 IFNULL(assignee_user_name, ''),
+                 IFNULL(name, ''),
+                 IFNULL(task_id, ''),
+                 IFNULL(comment, ''),
+                ''
+                ) like concat('%',#{queryParam.filter},'%')
+            </if>
+            <if test="queryParam.assigneeUser != null and queryParam.assigneeUser != ''">
+                and assignee_user =  #{queryParam.assigneeUser}
+            </if>
+            <if test="queryParam.finished !=null and queryParam.finished">
+                and result != '处理中'
+            </if>
+            <if test="queryParam.finished !=null and !queryParam.finished">
+                and result = '处理中'
+            </if>
+            <if test=" queryParam.beginCreateTime != null  ">
+                <![CDATA[ and DATE_FORMAT(task_create_time,'%Y-%m-%d') >= DATE_FORMAT(#{queryParam.beginCreateTime},'%Y-%m-%d')]]>
+            </if>
+            <if test=" queryParam.endCreateTime != null">
+                <![CDATA[ and DATE_FORMAT(task_create_time,'%Y-%m-%d') <= DATE_FORMAT(#{queryParam.endCreateTime},'%Y-%m-%d')]]>
+            </if>
+        </where>
+    </select>
+</mapper>

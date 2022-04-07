@@ -1,0 +1,480 @@
+/**
+*文件用途说明：监控系统全屏-公共样式
+*作者：鳄鱼仔
+*制作日期：2020.10.12
+**/
+
+.my-screen-box {
+	padding:18px 15px 4px;
+	min-width:1900px;
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	height:100%;
+	color:#288dff;
+	background:url("/static/images/screen/my-screen-bg.png") #0b0d30 no-repeat;
+	background-position:center center;
+	background-size:100% 100%;
+}
+.my-screen-box .my-topic .my-topic-name {
+	font-weight:400;
+	font-size:32px;
+	letter-spacing:6px;
+	text-align:center;
+	color:#fff;
+}
+.my-screen-box .my-topic .my-topic-date {
+	margin:0 auto;
+	width:380px;
+	height:30px;
+	line-height:30px;
+	border:2px solid #288dff;
+	border-radius:4px;
+	text-align:center;
+	font-weight:bold;
+	letter-spacing:3px;
+	margin-top:15px;
+}
+.my-screen-box .my-topic .my-topic-date span{
+	margin: 0 10px;
+}
+.my-screen-box .my-content {
+	display:table;
+	width:calc(100% - 80px);
+	height:calc(100vh - 160px);
+	margin: 20px 40px;
+}
+.my-screen-box .my-content .my-content-message {
+	display:table-cell;
+	vertical-align:middle;
+  text-align:center;
+	width:100%;
+	height:100%;
+}
+.my-screen-box .my-content .my-content-message .my-content-message-con{
+  padding-top: 20px;
+  height: 100%;
+  overflow: auto;
+}
+.my-screen-box .my-content .my-message-first {
+	position:relative;
+	border:1px solid #288dff;
+}
+.my-screen-box .my-content .my-message-first .my-title {
+	position:absolute;
+	height:18px;
+	line-height:18px;
+	padding:0 20px;
+	font-size:16px;
+	top:0;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	background:#0b0d30;
+	border:1px;
+	white-space: nowrap;
+}
+.my-screen-box .my-content .my-title-tips{
+	color: rgb(255,213,43);
+	font-weight: bold;
+	margin-left: 10px;
+	font-size: 18px;
+}
+.my-screen-box .my-content .my-message-first .my-title:after,.my-screen-box .my-content .my-message-first .my-title:before {
+	position:absolute;
+	top:0;
+	content:" ";
+	display:inline-block;
+	width:4px;
+	height:18px;
+	border:1px solid #288dff;
+}
+.my-screen-box .my-content .my-message-first .my-title:before {
+	left:0;
+	border-right:none;
+}
+.my-screen-box .my-content .my-message-first .my-title:after {
+	right:0;
+	border-left:none;
+}
+.my-screen-box .my-content .my-message-first .my-title p {
+	margin:0;
+	word-break:keep-all;
+	letter-spacing:2px;
+	color:#fff;
+}
+.my-screen-box .my-content .my-message-first .my-unit {
+	position: absolute;
+    right: 15px;
+    font-size: 13px;
+    top: 10px;
+    color: #288dff;
+}
+.my-screen-box .my-content .my-message-first .my-desc,.my-message-second .my-desc {
+	margin:25px;
+}
+.my-screen-box .my-content .my-message-second .my-desc {
+	border:1px solid #288dff;
+}
+
+/*转角*/
+.my-screen-box .my-content .my-tag {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	pointer-events:none;
+}
+.my-screen-box .my-content .my-tag .my-tag-icon:before {
+	content:" ";
+	display:inline-block;
+	border-color:#288dff;
+	border-width:0;
+	border-style:solid;
+	position:absolute;
+	width:20px;
+	height:20px;
+}
+.my-screen-box .my-content .my-tag .my-tag-icon-left:before {
+	border-left-width:4px;
+	left:0;
+}
+.my-screen-box .my-content .my-tag .my-tag-icon-right:before {
+	border-right-width:4px;
+	right:0;
+}
+.my-screen-box .my-content .my-tag .my-tag-icon-top:before {
+	border-top-width:4px;
+	top:0;
+}
+.my-screen-box .my-content .my-tag .my-tag-icon-bottom:before {
+	border-bottom-width:4px;
+	bottom:0;
+}
+
+/*表格*/
+.my-screen-box .my-content .my-desc-table {
+	width:100%;
+	border-collapse:collapse;
+	margin:15px;
+	table-layout:fixed;
+	word-break:break-all;
+	margin-block-start:0;
+	margin-block-end:0;
+}
+.my-screen-box .my-content .my-desc-table tr th,.my-screen-box .my-content .my-desc-table tr td {
+	text-align:left;
+	padding:10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.my-screen-box .my-content .my-desc-table tr th {
+	font-size:16px;
+	color:#fff
+}
+.my-screen-box .my-content .my-desc-table tr td:nth-child(4) {
+	color:rgb(255,213,43);
+}
+
+/*类型*/
+.my-screen-box .my-content .my-desc-type .my-type {
+	position:relative;
+	width: 140px;
+	height: 147px;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-ms-flex-direction:column;
+	flex-direction:column;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+	background-size: 100% 100%;
+}
+.my-screen-box .my-content .my-desc-type .el-col:first-child .my-type {
+	background:url("/static/images/screen/my-screen-first.png") no-repeat;
+	background-size: 100% 100%;
+	color:#ffd42b;
+}
+.my-screen-box .my-content .my-desc-type .el-col:nth-child(2) .my-type {
+	background:url("/static/images/screen/my-screen-second.png") no-repeat;
+	background-size: 100% 100%;
+	color:#08d5c1;
+}
+.my-screen-box .my-content .my-desc-type .el-col:nth-child(3) .my-type {
+	background:url("/static/images/screen/my-screen-third.png") no-repeat;
+	background-size: 100% 100%;
+	color:#07b6ff;
+}
+.my-screen-box .my-content .my-desc-type .el-col:nth-child(4) .my-type {
+	background:url("/static/images/screen/my-screen-forth.png") no-repeat;
+	background-size: 100% 100%;
+	color:#ffd42b;
+}
+.my-screen-box .my-content .my-desc-type .my-type p {
+	margin:0;
+	text-align:center;
+}
+.my-screen-box .my-content .my-desc-type .my-type .my-type-title {
+	line-height:20px;
+	font-size:13px;
+	color:#fff;
+	font-weight:700;
+	font-style:italic;
+}
+.my-screen-box .my-content .my-desc-type .my-type .my-type-name {
+	font-size:50px;
+	font-weight:700;
+	font-style:italic;
+  white-space: nowrap;
+}
+.my-screen-box .my-content .my-desc-type .my-type .my-type-unit {
+	font-size:16px;
+	font-weight:700;
+	font-style:italic;
+	text-align:right;
+	padding-right:14px;
+	padding-bottom:15px;
+}
+.my-screen-box .my-content .my-message-first {
+  margin-bottom: 25px;
+}
+.my-screen-box .my-content .my-message-first:last-child {
+  margin-bottom: 0;
+}
+.my-screen-box .my-content .my-message-height1{
+  height: 480px;
+}
+.my-screen-box .my-content .my-message-height1 .my-desc{
+  height: 430px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.my-screen-box .my-content .my-message-height2{
+  width: 100%;
+  height: 367px;
+  padding:20px 30px;
+  margin-top: 25px;
+}
+.my-screen-box .my-content .my-message-height2 .my-desc{
+  margin: 0;
+}
+.my-screen-box .my-content .my-warn-sum{
+  width: 100%;
+  height: 350px;
+}
+.my-screen-box .my-content .my-desc-nothing{
+  color: #288dff;
+}
+.my-screen-box .my-content .my-desc-nothing .my-nothing-icon{
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.my-screen-box .my-content .my-desc-nothing .my-nothing-name{
+  font-size: 20px;
+}
+.my-screen-box .my-content .my-table-box {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.my-screen-box .my-content .my-table-cell-box  {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*设备统计*/
+.my-screen-box .my-content .my-message-total-height{
+	width: 100%;
+	height: 140px;
+	padding:20px 30px;
+}
+.my-screen-box .my-content .my-message-total-height .my-desc{
+	margin: 0;
+}
+
+/*饼状图*/
+.my-screen-box .my-content .my-message-pie-height{
+	width: 100%;
+	height: 180px;
+	padding:10px 30px;
+}
+.my-screen-box .my-content .my-message-pie-height .my-desc{
+	margin: 0;
+}
+.my-screen-box .my-content .my-message-pie-height .my-desc .my-desc-pie{
+	width: 100%;
+	height: 160px;
+}
+
+/*折线图*/
+.my-screen-box .my-content .my-message-line-height{
+	width: 100%;
+	height: 241px;
+	padding:20px;
+	margin-top: 25px;
+}
+.my-screen-box .my-content .my-message-line-height .my-desc{
+	margin: 0;
+}
+.my-screen-box .my-content .my-message-line-height .my-desc .my-desc-line{
+	width: 100%;
+	height: 220px;
+}
+
+/*告警统计*/
+.my-message-total-height .my-machine-total .my-mess{
+	position:relative;
+	width: 100px;
+	height: 100px;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-ms-flex-direction:column;
+	flex-direction:column;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+	background-size: 100% 100%;	
+	background:url("/static/images/screen/my-screen-first.png") no-repeat;
+	background-size: 100% 100%;
+	color:#288dff;
+	margin: 0 auto;
+}
+.my-message-total-height .my-machine-total .my-mess .my-mess-title{
+	font-size: 14px;
+	color: #fff;
+}
+.my-message-total-height .my-machine-total .my-mess .my-mess-name{
+	font-size: 30px;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.my-message-total-height .my-machine-total .my-mess .my-mess-desc{
+	font-size: 14px;
+    text-align: right;
+	padding: 0 15px 10px 0;
+	font-weight: bold;
+}
+.my-message-total-height .my-machine-total:nth-child(2) .my-mess{
+	background-size: 100% 100%;	
+	background:url("/static/images/screen/my-screen-forth.png") no-repeat;
+	background-size: 100% 100%;
+	color:red;
+}
+.my-message-total-height .my-machine-total:nth-child(3) .my-mess{
+	background-size: 100% 100%;	
+	background:url("/static/images/screen/my-screen-third.png") no-repeat;
+	background-size: 100% 100%;
+	color:#ffd42b;
+}
+.my-desc-echart .my-echart-item{
+	width:100%;
+	height:100%;
+}
+
+/*智能机柜*/
+.my-screen-service-box {background:url("/static/images/screen-bg.png") no-repeat;padding:0;}
+.my-screen-service-box .my-topic .my-topic-name { margin-top: 10px; }
+.my-screen-service-box .my-topic .my-topic-date {border:none;color:#fff;margin-top:5px;}
+.my-screen-service-box .my-content {width:100%;height:calc(100vh - 90px);margin:0;/*background:green;*/overflow:hidden;}
+.my-screen-box .my-content .my-content-message .my-content-message-con {padding-top:0;}
+
+/*智能机柜-头部统计*/
+.my-screen-service-box .my-content .my-message-warn-sum {margin-top:0;padding:0;height:110px;margin-bottom:10px !important;border:none;width:100%;background-color:rgba(6,30,93,0.5);}
+.my-screen-service-box .my-content .my-screen-service-warn-sum table {width:100%;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum table tr td {max-width:90px;min-width:90px;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum .my-kind-box {width:calc(100% - 6px);height:100px;display:table;border-left:3px solid #061e5d;border-right:3px solid #061e5d;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum .my-kind-box .my-kind {color:#F00;display:table-cell;vertical-align:middle;text-align:center;font-size:20px;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum .my-kind-box .my-kind .my-kind-title {color:#fff;margin-bottom:15px;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum .my-kind-name {color:#4d99fc;font-weight:bold;font-size:22px;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum table tr td:nth-child(3n+1) .my-kind-name {color:#4d99fc;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum table tr td:nth-child(3n+2) .my-kind-name {color:#f46827;}
+.my-screen-service-box .my-content .my-screen-service-warn-sum table tr td:nth-child(3n+3) .my-kind-name {color:#40faee;}
+
+
+/*智能机柜-前十条报警信息*/
+.my-screen-service-box .my-content .my-screen-service-warn-mess {height:390px !important;overflow:hidden;background:rgb(10,29,50,0.8);border:none !important;margin-top:10px;margin-left:10px;}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc {height:390px;margin:0;border:none !important}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table {margin:0;}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr th {background:rgb(25,129,246);font-size:14px;padding-top:12px;padding-bottom:12px;}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr td {color:#fff;font-size:12px;}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr:nth-child(odd) td {background:rgb(0,44,81,0.8);}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr:nth-child(even) td {background:rgb(10,29,50,0.8);}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr td:nth-child(4) {color:#fff;}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr td:nth-child(1) span {width:15px;height:15px;background:rgb(25,129,246);display:inline-block;line-height:15px;text-align:center;padding:0;vertical-align:middle;border-radius:2px;}
+/*IE*/
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr:nth-child(odd) td {background:#002C51;filter: alpha(opacity=80);}
+.my-screen-service-box .my-content .my-screen-service-warn-mess .my-desc-table tr:nth-child(even) td { background:#0A1D32; filter: alpha(opacity=80); }
+
+.my-screen-service-box  .my-content .my-table-cell-box {
+    vertical-align: baseline;
+}
+
+/*近7天告警离线设备数量*/
+.my-screen-service-box .my-content .my-message-machine-part{ margin-right: 0px !important; margin-top: 20px; height: 420px; overflow: hidden; background: rgba(6, 30, 93, 0.5); border-top: 2px solid rgba(1, 153, 209, 0.5); }
+.my-screen-service-box .my-content .my-message-machine-part .my-message-first {position:relative;border:1px solid #288dff;border:none;}
+.my-screen-service-box .my-content .my-message-machine-part .my-message-first .my-title {border:none;background:none;left:15%;top:5%;}
+.my-screen-service-box .my-content .my-message-machine-part .my-message-first .my-title:after,.my-screen-service-box .my-content .my-message-machine-part .my-message-first .my-title:before {border:none !important;}
+.my-screen-service-box .my-content .my-message-machine-part .my-message-first .my-title p {font-weight:bold;letter-spacing:1px;}
+.my-screen-service-box .my-content .my-message-machine-part .my-message-machine-part .my-message-line-height {height:350px;margin-top:40px;}
+
+
+/*设备在线和离线率*/
+.my-screen-service-box .my-content .my-message-count-part {height:390px;overflow:hidden;margin-top:10px;border-top:2px solid rgba(1,153,209,0.5);background-color:rgba(6,30,93,0.5);}
+.my-screen-service-box .my-content .my-message-count-part .my-message-first {border:none !important;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-first .my-title {font-weight:bold;background:none;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-first .my-title:after,.my-screen-service-box .my-content .my-message-count-part .my-message-first .my-title:before {border:none;}
+.my-screen-service-box .my-content .my-message-count-part  .my-message-machine-percent {height:300px !important;padding:30px 0;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-percent .my-title {top:40px;left:70px;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-percent-warn .my-title p {color:#a52058;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-percent-online .my-title p {color:#40faee;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-percent-warn .my-desc-echart {width:180px;height:260px;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-percent-online .my-desc-echart {width:180px;height:260px;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-number {width:100%;height:90px !important;overflow:hidden;background:rgba(6,30,93,0.7);}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-number .my-machine-total {padding:0 !important;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-number .my-machine-total .my-mess {height:40px;background:none;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-number .my-machine-total .my-mess .my-mess-title {text-align:left;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-number .my-machine-total .my-mess .my-mess-name {text-align:right;color:#40faee;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-number .my-machine-total:nth-child(1) .my-mess .my-mess-name {text-align:right;color:#f46827;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-number .my-machine-total .my-mess .my-mess-name .my-mess-desc {margin-left:5px;color:rgb(25,129,246);font-weight:normal;}
+.my-screen-service-box .my-content .my-message-count-part .my-message-machine-percent-online {}
+
+/*智能机柜-近7天告警时长*/
+.my-screen-service-box .my-content .my-message-warn-timing{
+	height:830px;
+	overflow:hidden; 
+	margin-top: 10px;	
+    border: none;
+    background-color: rgba(6, 30, 93, 0.5);
+    border-top: 2px solid rgba(1, 153, 209, 0.5);
+}
+
+.my-screen-service-box .my-content .my-message-warn-timing .my-desc{
+	width: 360px;
+	height: 720px;
+	margin: 90px auto 50px auto;
+}
+
+.my-screen-service-box .my-content .my-message-warn-timing .my-title:after, 
+.my-screen-service-box .my-content .my-message-warn-timing .my-title:before {
+    border: none;
+}
+.my-screen-service-box .my-content .my-message-warn-timing .my-title {
+    background: none;
+    top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.my-screen-service-box .my-content .my-message-warn-timing .my-unit {
+    top: 60px;
+    color: #fff;
+}

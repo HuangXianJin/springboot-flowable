@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huangxj.flowable.mapper.CustomProcessInstanceMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, tenant_code, start_user,start_user_name, name, model_info_id, process_instance_id, process_definition_id, status, result, end_time, form_variables, create_id, create_time, modify_id, modify_time
+    </sql>
+    <!-- 自定义关联查询分页 -->
+    <select id="select" resultType="com.huangxj.flowable.dto.CustomProcessInstanceDto">
+        SELECT <include refid="Base_Column_List" />
+        FROM flow_custom_process_instance
+        <where>
+            <if test="queryParam.filter != null and queryParam.filter != ''">
+                and concat(
+                 IFNULL(start_user, ''),
+                 IFNULL(name, ''),
+                ''
+                ) like concat('%',#{queryParam.filter},'%')
+            </if>
+            <if test="queryParam.startUser != null and queryParam.startUser != ''">
+                and start_user =  #{queryParam.startUser}
+            </if>
+            <if test=" queryParam.beginCreateTime != null  ">
+                <![CDATA[ and DATE_FORMAT(create_time,'%Y-%m-%d') >= DATE_FORMAT(#{queryParam.beginCreateTime},'%Y-%m-%d')]]>
+            </if>
+            <if test=" queryParam.endCreateTime != null">
+                <![CDATA[ and DATE_FORMAT(create_time,'%Y-%m-%d') <= DATE_FORMAT(#{queryParam.endCreateTime},'%Y-%m-%d')]]>
+            </if>
+        </where>
+    </select>
+</mapper>
