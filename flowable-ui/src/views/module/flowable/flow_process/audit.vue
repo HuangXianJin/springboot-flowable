@@ -218,7 +218,7 @@ export default {
             if (task.result !== '处理中') { // 只有待处理才需要
               return
             }
-            if (!this.taskId || !task.taskId || task.taskId !== this.taskId || task.assigneeUser !== this.$store.getters.account.mobile) { // 自己不是处理人
+            if (!this.taskId || !task.taskId || task.taskId !== this.taskId || task.assigneeUser !== this.$store.getters.account.userId) { // 自己不是处理人
               return
             }
             this.runningTask = task
